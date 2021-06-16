@@ -1,0 +1,107 @@
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git version
+git version 2.31.1.windows.1
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=Snehesh Dutta
+user.email=sneheshdutta@gmail.com
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git init
+Reinitialized existing Git repository in D:/Git Hub Projects/Git_handsons/.git/
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ ls -al
+total 1025
+drwxr-xr-x 1 SneheshDutta 197121  0 Jun 16 10:31 ./
+drwxr-xr-x 1 SneheshDutta 197121  0 Jun 16 10:31 ../
+drwxr-xr-x 1 SneheshDutta 197121  0 Jun 16 11:57 .git/
+-rw-r--r-- 1 SneheshDutta 197121 55 Jun 16 10:31 README.md
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ echo "Welcome to the version control" >> welcome.txt
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ ls -al
+total 1026
+drwxr-xr-x 1 SneheshDutta 197121  0 Jun 16 11:57 ./
+drwxr-xr-x 1 SneheshDutta 197121  0 Jun 16 10:31 ../
+drwxr-xr-x 1 SneheshDutta 197121  0 Jun 16 11:57 .git/
+-rw-r--r-- 1 SneheshDutta 197121 55 Jun 16 10:31 README.md
+-rw-r--r-- 1 SneheshDutta 197121 31 Jun 16 11:57 welcome.txt
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ cat welcome.txt
+Welcome to the version control
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        welcome.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git add welcome.txt
+warning: LF will be replaced by CRLF in welcome.txt.
+The file will have its original line endings in your working directory
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git commit -m "Welcome message added"
+[main ad8e175] Welcome message added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git remote add origin https://github.com/Sneheshdutta/Git_handsons.git
+error: remote origin already exists.
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Sneheshdutta/Git_handsons.git'
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Sneheshdutta/Git_handsons.git'
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Sneheshdutta/Git_handsons.git
+   5bd8e5c..ad8e175  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+SneheshDutta@DESKTOP-NS8B6PC MINGW64 /d/Git Hub Projects/Git_handsons (main)
+$
+
+
+
+
+
+
+
+
